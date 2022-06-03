@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+                <form th:action="@{/cursos/salvar}" method="post" th:object="${curso}">
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" th:field="*{nome}" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="@{../js/bootstrap.min.js}"></script>
+</body>
+
+</html>

@@ -7,19 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Curso {
+public class TipoSugestao {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(nullable = false)
-    private String nome;   
+    private String descricao;
     
-    public Curso() {
-    }
-
-    public Curso(String nome) {
-        this.nome = nome;
+    public TipoSugestao(String descricao) {
+        this.descricao = descricao;
     }
 
     public Integer getId() {
@@ -30,16 +27,16 @@ public class Curso {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setDescricao(String nome) {
+        this.descricao = nome;
     }
 
     @Override
     public String toString() {
-        return "Curso [id=" + id + ", nome=" + nome + "]";
+        return "Curso [id=" + id + ", descricao=" + descricao + "]";
     }
 }
